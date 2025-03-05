@@ -1,0 +1,23 @@
+% docker run -d -it devopsdockeruh/simple-web-service:ubuntu 
+Unable to find image 'devopsdockeruh/simple-web-service:ubuntu' locally
+ubuntu: Pulling from devopsdockeruh/simple-web-service
+4f4fb700ef54: Download complete 
+5d3b2c2d21bb: Download complete 
+75adf526d75b: Download complete 
+965d4bbb586a: Download complete 
+3fc2062ea667: Download complete 
+Digest: sha256:d44e1dce398732e18c7c2bad9416a072f719af33498302b02929d4c112e88d2a
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:ubuntu
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+6363c66cfa005d2d28d75cde883cd32b6ec05fc53e77e3ea5a92c49760880fc0
+
+% docker exec -it 6363c66cfa005d2d28d75cde883cd32b6ec05fc53e77e3ea5a92c49760880fc0 bash
+root@6363c66cfa00:/usr/src/app# tail -f ./text.log
+2025-03-04 11:43:31 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2025-03-04 11:43:33 +0000 UTC
+2025-03-04 11:43:35 +0000 UTC
+2025-03-04 11:43:37 +0000 UTC
+2025-03-04 11:43:39 +0000 UTC
+2025-03-04 11:43:41 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
