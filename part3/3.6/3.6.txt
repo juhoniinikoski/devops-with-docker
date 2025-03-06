@@ -1,0 +1,7 @@
+% docker images | grep end
+example-frontend   latest    d23ac92841fe   2 minutes ago   2.04GB
+example-backend    latest    548124758978   5 minutes ago   1.37GB
+
+% docker images | grep end
+example-backend    latest    53ae4676af07   15 minutes ago   353MB
+example-frontend   latest    aec71a57a712   18 minutes ago   1.13GB

@@ -1,0 +1,13 @@
+FROM alpine:latest
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN apk add --no-cache go && go build && addgroup --system gogroup && adduser --system appuser -G gogroup && apk del go
+
+USER appuser
+
+EXPOSE 8080
+
+CMD ["./server"]

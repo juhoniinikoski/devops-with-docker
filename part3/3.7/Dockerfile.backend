@@ -1,0 +1,22 @@
+FROM golang:alpine AS builder
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN go build
+
+FROM alpine:latest
+
+WORKDIR /usr/src/app
+
+COPY --from=builder /usr/src/app/server .
+
+RUN addgroup --system gogroup && \
+    adduser --system appuser -G gogroup
+
+USER appuser
+
+EXPOSE 8080
+
+CMD ["./server"]
